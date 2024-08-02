@@ -122,7 +122,6 @@ switch(saludo){
 // 9. Usa un switch para hacer de nuevo el ejercicio 6
     //UPS YA LO HICE SON SWITCH EHEHEH
 // 10. Usa un switch para hacer de nuevo el ejercicio 7
-
 switch (mes) {
     case "enero":
     case "marzo":
