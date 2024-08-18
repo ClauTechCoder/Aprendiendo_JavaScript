@@ -86,3 +86,64 @@ let person5 = new PersonGetterSetter("jaime",24,"jaimito","IBAN123456789")
 console.log(person5.name) // ahora puedo ver la propiedad de esta manera
 person5.bank = "IBAN0000000" 
 console.log(person5.bank) // ahora puedo ver la propiedad modificada
+
+// HERENCIA EN LAS CLASES - Heredar propiedades y comportamiento de una clase.
+
+class Animal { // Clase Padre
+
+    constructor(name){
+        this.name = name
+    }
+
+    sound() {
+        console.log("Emite sonido genérico.")
+    }
+
+}
+
+// Clase hija, hereda de la padre que es Animal. Tiene new metodos esta clase.
+class Dog extends Animal{ //con extends tenemos herencia.
+
+    sound() { // Puedo reescribir metodos sin problemas. Redefino su comportamiento.
+        console.log("GUAU GUAU!!")
+    }
+
+    run() {
+        console.log("El perro corre.");
+    }
+
+}
+
+let myDog = new Dog("Puppy");
+myDog.run(); // metodo propio
+myDog.sound(); // metodo heredado
+
+class Fish extends Animal{ 
+
+    constructor(name,size){ // Puedo tener constructores propios
+        super(name) // es llamada a superclase (Clase Padre)
+    }
+
+    swim() {
+        console.log("El pez nada.");
+    }
+
+}
+
+let myFish = new Fish("Aguacate","small");
+myFish.swim(); // metodo propio
+myFish.sound(); // metodo heredado
+
+// Metodos estáticos -- le ponemos la palabra static delante. No neceistas instanciar la clase
+
+class MathOperations {
+
+    static sum(a, b){
+        return a + b
+    }
+
+}
+
+//let math = new MathOperations(); No necesario ya que accedo a un metodo static
+console.log(MathOperations.sum(2,3)) // no necesito objeto de lcase/instancia
+
