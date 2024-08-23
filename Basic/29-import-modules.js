@@ -34,6 +34,4 @@ import {ModularClass} from "./directory/MyModularProject.js"
 
 */
 
-/* IMPORTAR MODULOS EXTERNOS QUE NO SON MIOS
 
-*/ 
