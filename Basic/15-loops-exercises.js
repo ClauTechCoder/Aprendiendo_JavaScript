@@ -22,6 +22,7 @@
         }
     }
 
+    
 // 4. Dado un array de nombres, usa un bucle para imprimir cada nombre en la consola
     let myArray = ["pepe", "juan", "ana", "Claudia", "maika"]
     for(let i = 0; i < myArray.length; i++){
